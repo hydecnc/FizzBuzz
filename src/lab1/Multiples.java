@@ -2,22 +2,24 @@ package lab1;
 
 public class Multiples {
     public static void main(String[] args) {
-        int a = 3;
-        int b = 5;
-        int n = 1000;
-            int i = 1;
-            int count = 0;
-            while (i < n) {
-                boolean dBa = i % a == 0;
-                boolean dBb = i % b == 0;
+        System.out.println(multiples(1000, 3, 5));
+    }
 
-                if (dBa || dBb) {
-                    count++;
-                }
+    public static int multiples(int n, int a, int b) {
 
-                i++;
+        int i = 1;
+        int count = 0;
+        while (i < n) {
+            boolean dBa = i % a == 0;
+            boolean dBb = i % b == 0;
+            
+            if (dBa || dBb) {
+                count++;
             }
-        System.out.println(count);
+
+            i++;
+        }
+        return count;
     }
 
 
